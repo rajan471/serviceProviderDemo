@@ -1,27 +1,25 @@
-# Client
+# Biz2credit assignment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+## Things that are done
+- web API integration:  Nodejs is used to create a mock server for the webAPI. Please use the following cmd to start the server at PORT=8000. Make sure `PORT=8000` is written in the .env file.
+```
+NodeJS:
+~ npm start
 
-## Development server
+Angular
+~ ng serve
+```
+- Search by price, rating and provider name
+- Sort by price and rating
+- Feature to download ISP details as JPG
+- Link are using target=_blank
+- Social media integration as tweeter tweet message
+- Fully responsive design
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+Note:
+- I have tried to use angular material in the code but due to design limitation much was not possible. Also some icons may appear different due to icon unavailability
+- No comments have been made in the code due to time limitation but I have tried to put as much functionality in the code as possible.
+- A child router has been used to show the provider details.
+- Accessibility improveents have not been done due to time limitations
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
