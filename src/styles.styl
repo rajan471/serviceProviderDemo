@@ -1,1 +1,100 @@
-/* You can add global styles to this file, and also import other style files */
+@import('./themeSetting')
+body, *
+	box-sizing: border-box
+.col
+	float: left;
+body, p, div
+	color: textColor
+for num in 1..12
+	@media screen and (min-width: 981px) 
+		.col-l-{num}
+			width: (8.33 * num)%;
+
+	@media screen and (max-width: 980px) 
+		.col-m-{num} 
+			width: (8.33 * num)%;
+		
+	@media screen and (max-width: 480px) 
+		.col-s-{num} 
+			width: (8.33 * num)%;
+.txt-al-r
+	text-align: right
+.container, .clear
+	clear: both
+.clear::after,
+.clear::before,
+.container::before,
+.container::after
+	display block
+	content: ""
+	clear: both
+.pad1020
+	padding: 10px 20px
+
+.sprit-icon
+	width: 24px; height: 24px;
+	display inline-block
+	vertical-align: middle
+
+.bg-001_link 
+	background: url('/assets/css_sprites.png') -54px -10px;
+
+.bg-001_cloud_storage_download 
+	background: url('/assets/css_sprites.png') -186px -10px;
+
+.bg-001_mail 
+	background: url('/assets/css_sprites.png') -10px -53px
+
+.bg-002_phone_call 
+	background: url('/assets/css_sprites.png') -230px -54px
+
+.bg-002_share 
+	background: url('/assets/css_sprites.png') -98px -10px;
+
+.bg-003_dollar 
+	background: url('/assets/css_sprites.png') -274px -54px;
+
+.bg-004_wifi_signal 
+	background: url('/assets/css_sprites.png') -10px -231px;
+
+
+.bg-database 
+	background: url('/assets/css_sprites.png') -142px -142px;
+
+.bg-right_arrow
+	background: url('/assets/css_sprites.png') -318px -54px;
+button
+	cursor pointer
+button:focus
+	outline: none
+
+input[type="radio"] 
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: inset 0 1px 1px rgba(255,255,255,0), 0 0 0 1px rgba(0,0,0,1)
+	cursor: pointer;
+	display: inline-block;
+	height: 15px;
+	top: 2px;
+	position: relative;
+	width: 15px;
+	-webkit-appearance: none;
+
+input[type="radio"]:after 
+	background-color: #fff;
+	border-radius: 25px;
+	box-shadow: inset 0 0 0 1px rgba(0,0,0,1), 0 1px 1px rgba(255,255,255,1);
+	content: '';
+	display: block;
+	height: 7px;
+	left: 4px;
+	position: relative;
+	top: 4px;
+	width: 7px;
+
+input[type="radio"]:checked:after 
+	background-color: #000;
+	box-shadow: inset 0 0 0 1px rgba(0,0,0,1), inset 0 2px 2px rgba(255,255,255,0.4), 0 1px 1px rgba(255,255,255,1), 0 0 2px 2px rgba(225,225,225,1);
+
+input[type="radio"]:focus
+	outline: none

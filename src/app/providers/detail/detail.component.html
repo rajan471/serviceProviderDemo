@@ -1,0 +1,34 @@
+<section #detail *ngIf="currProvider">
+    <div class="detail-box">
+        <div class="img-box">
+            <div class="img-container">
+                <img [src]="currProvider.image" alt="provider_img">
+            </div>
+        </div>
+        <div class="provider-info">
+            <div class="head">{{currProvider.name}}</div>
+            <div class="data">
+                <ul>
+                    <li><span class="sprit-icon bg-004_wifi_signal"></span> Max. Speed: {{currProvider.max_speed}} mbps
+                    </li>
+                    <li><span class="sprit-icon bg-002_phone_call"></span> {{currProvider.contact_number}}</li>
+                    <li><span class="sprit-icon bg-001_mail"></span>&nbsp;<a
+                            href="mailto:{{currProvider.email}}">{{currProvider.email}}</a></li>
+                    <li><span class="sprit-icon bg-003_dollar"></span> Min. Plan: {{currProvider.lowest_price}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="rating-container">
+        <app-rating [rating]="currProvider.rating"></app-rating>
+    </div>
+    <div class="description">
+        {{currProvider.description}}
+    </div>
+    <div class="btn-group">
+        <a href="{{currProvider.url}}" target="_blank"><span class="sprit-icon bg-001_link"></span> Link</a>
+        <a href="https://twitter.com/intent/tweet?url={{currProvider.url}}&text={{currProvider.description}}" target="_blank"><span class="sprit-icon bg-002_share"></span> Share</a>
+        <button (click)="download()"><span class="sprit-icon bg-001_cloud_storage_download"></span> Download</button>
+    </div>
+</section>

@@ -1,0 +1,109 @@
+@import("../../../themeSetting")
+transformRotate(d)
+	transform: rotate(d)
+	-webkit-transform: rotate(d)
+	-moz-transform: rotate(d)
+.bg-grey.search-bar
+	background: #d6d5dc
+	padding: 7px
+	height: 50px
+	position relative
+	input 
+		width: 100%
+		height: 100%
+		border: none
+		border-radius: 7px
+		padding-left: 35px 
+	input:focus
+		outline: none
+	
+	>.mat-icon
+		position: absolute;
+		top: 15px
+		left: 15px
+	.close
+		transformRotate(45deg)
+		position: absolute;
+		right: 15px;
+		top: 17px;
+		.mat-icon
+			font-size: 18px
+.homelink
+	display inline-block
+	color: textColor 
+	text-decoration: none
+	font-size: 20px
+	.mat-icon
+		position relative
+		top: 5px
+optionBarElems()
+	display: inline-block;
+	background: #fff;
+	border: 1px solid #ababab;
+	text-align: center;
+	padding: 10px;
+	margin: 0 10px
+.option-bar
+	text-align: center
+
+span.btn-form 
+	optionBarElems()
+	border-radius: 5px
+	.layers-icon
+		background-image: url("/assets/001-layers.png")
+span.radio-group
+	optionBarElems()
+.provider-list 
+	padding 10px 0 10px 10px
+	margin 0
+	>li 
+		list-style none
+		position relative
+		padding 5px 30px 5px 5px
+		border 1px solid #c3deb4
+		border-radius 3px
+		margin-bottom 10px
+		background #eaf2e7
+		cursor pointer
+		>.mat-icon
+			position relative
+			top 5px
+iconSettings() 
+	position absolute
+	top 4px
+span.next
+	iconSettings() 
+	right 5px
+	cursor pointer
+	width: 20px
+	height 20px
+	border: 1px solid #282828
+	border-radius: 20px
+	top: 6px
+span.database-icon
+	iconSettings() 
+	left 5px
+.right
+	float right
+span.next::after, span.next::before
+	content: ""
+	position absolute
+	width 8px
+	height: 2px
+	background: #282828
+	top: 8px
+	left: 2px
+getRotatation(d)
+	transform: rotate(d);
+	-webkit-transform: rotate(d);
+	-moz-transform: rotate(d);
+span.next::after
+	getRotatation(37deg)
+	transform-origin: 8px 5px;
+span.next::before
+	getRotatation(142deg);
+	transform-origin: 5px 3px;
+
+@media screen and (max-width : 980px)
+	.provider-list
+		padding: 10px

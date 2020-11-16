@@ -1,0 +1,7 @@
+<div><span class="b">Rating: </span>
+    <ul title="{{rating}}">
+        <li *ngFor="let star of stars; let i = index">
+            <span class="star {{getStarClassName(i+1)}}"><span class="before"></span></span>
+        </li>
+    </ul>
+</div>

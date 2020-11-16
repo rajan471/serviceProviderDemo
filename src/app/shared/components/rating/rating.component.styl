@@ -1,0 +1,29 @@
+ul 
+    margin: 0
+    padding: 0 
+    display inline-block
+    li 
+        list-style none
+        display inline-block
+        margin-right: 5px
+.star
+	position: relative
+	width: 24px
+	height: 24px
+	display inline-block
+	vertical-align: middle
+
+for state in 0..10
+	.bg_star_{state}
+		background: url('/assets/css_sprites.png') -99px -232px;
+	.bg_star_{state} .before
+		display: block;
+		background: url(/assets/css_sprites.png) -54px -232px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: (2.4 * state)px;
+		height: 24px;
+
+span.b 
+	color #282828

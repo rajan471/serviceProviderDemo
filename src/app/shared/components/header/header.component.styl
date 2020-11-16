@@ -1,0 +1,46 @@
+@import('../../../../themeSetting')
+	
+.mk-btn
+	border: 2px solid #7a975d
+	background: #e5f7e3
+	color: textBoldColor
+	max-width: 250px
+	padding: 10px
+	border-radius: 10px
+	margin-top: 10px
+	span 
+		width: 50%
+		display: inline-block
+	>:last-child
+		border-left: 2px solid textColor
+		text-align: right 
+
+header
+	padding: 10px 10px 0
+	border-bottom: 2px solid #2e2e2e
+
+.sub
+	color: secondaryColor
+	padding 0 20px 0 0
+	margin-top 20px
+
+@media screen and (max-width: 980px)  and (min-width: 481px)
+	.sub
+		margin-top: 0
+	.apiCounts 
+		margin: -50px 0px 10px
+		max-width: 100%
+		.mk-btn
+			float: right 
+			width: 100%
+
+@media screen and (max-width: 480px) 
+	.sub
+		margin-top: -10px
+	.txt-al-r
+		text-align: left
+	.apiCounts 
+		margin: 0 0 10px
+		.mk-btn
+			width 100%
+			max-width: 100%
